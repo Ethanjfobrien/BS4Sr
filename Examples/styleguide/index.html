@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Style Guide</title>
+
+       
+     
+    <link rel="stylesheet" href="tdcss/tdcss.css" type="text/css" media="screen">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script type="text/javascript" src="tdcss/tdcss.js"></script>
+    <script type="text/javascript">
+         $(function(){
+             $("#tdcss").tdcss();
+         })
+    </script>
+
+    <!-- Bootstrap CSS and js -->
+    <link rel="stylesheet" href="../dist/css/bootstrap.css" type="text/css">
+    <script type="text/javascript" src="../dist/js/bootstrap.js"></script>
+    
+
+</head>
+<body>
+  <div id="tdcss" class="container">
+
+  <!-- # Typography -->
+  <!-- & Headings -->
+  <!-- : All HTML headings, <code>h1</code> through <code>h6</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline. -->
+    <div>
+      <h1>h1. Bootstrap heading</h1>
+      <h2>h2. Bootstrap heading</h2>
+      <h3>h3. Bootstrap heading</h3>
+      <h4>h4. Bootstrap heading</h4>
+      <h5>h5. Bootstrap heading</h5>
+      <h6>h6. Bootstrap heading</h6>
+    </div>
+
+  <!-- : Create lighter, secondary text in any heading with a generic <code>small</code> tag or the <code>.small</code> class. -->
+    <div>
+      <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+      <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+      <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+      <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+      <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+      <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+    </div>
+
+
+  <!-- & Body copy -->
+  <!-- : Bootstrap's global default font-size is 14px, with a line-height of 1.428. This is applied to the body and all paragraphs. In addition, p (paragraphs) receive a bottom margin of half their computed line-height (10px by default). Make a paragraph stand out by adding <code>.lead</code>. -->
+<p><span class="lead">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</span>
+      <br>
+    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+</p>
+
+  <!-- & Inline text elements -->
+  <!-- : Marked text. For highlighting a run of text due to its relevance in another context -->
+  <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+  <!-- : Deleted text. For indicating blocks of text that have been deleted -->
+  <p><del>This line of text is meant to be treated as deleted text.</del></p>
+  <!-- : Strikethrough. For indicating blocks of text that are no longer relevant -->
+  <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+
+  </div>
+
+</body>
+</html>
