@@ -69,10 +69,144 @@
   <p><u>This line of text will render as underlined</u></p>
   <!-- : Small text. For de-emphasizing inline or blocks of text, use the <code>small</code> tag to set text at 85% the size of the parent. Heading elements receive their own font-size for nested <code>small</code> elements. -->
   <p><small>This line of text is meant to be treated as fine print.</small></p>
+  <!-- : Bold -->
+  <p><strong>rendered as bold text</strong></p>
+  <!-- : Italics -->
+  <p><em>rendered as italicized text</em></p>
+  <!-- : Html5 elements -->
+  <p>Feel free to use <b>&lt b &gt</b> and <i>&lt i &gt</i> in HTML5. &ltb&gt is meant to highlight words or phrases without conveying additional importance while &lti&gt is mostly for voice, technical terms, etc.</p>
   <!-- & Alignment classes -->
+  <!-- : Easily realign text to components with text alignment classes. -->
+  <div><p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+<p class="text-justify">Justified text.</p>
+<p class="text-nowrap">No wrap text.</p></div>
   <!-- & Transformation classes -->
+  <!-- : Transform text in components with text capitalization classes. -->
+  <div>
+	<p class="text-lowercase">Lowercased text.</p>
+	<p class="text-uppercase">Uppercased text.</p>
+	<p class="text-capitalize">Capitalized text.</p>
+ </div>
   <!-- & Abbreviations -->
-  <!-- & Alignment classes -->
+  <!-- : Basic Abbreviation -->
+  <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+  <!-- : Initialism. Add <code>.initialism</code>  to an abbreviation for a slightly smaller font-size. -->
+  <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+  <!-- & Addresses -->
+  <!-- : Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>br</code>. -->
+  <div>
+ <address>
+  <strong>Twitter, Inc.</strong><br>
+  795 Folsom Ave, Suite 600<br>
+  San Francisco, CA 94107<br>
+  <abbr title="Phone">P:</abbr> (123) 456-7890
+</address>
+
+<address>
+  <strong>Full Name</strong><br>
+  <a href="mailto:#">first.last@example.com</a>
+</address>
+</div>
+  <!-- & Blockqoutes -->
+  <!-- : Default blockquote -->
+  <blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+  <!-- : Blockqoute with citation -->
+  <blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+  <!-- : Alternative style -->
+  <blockquote class="blockquote-reverse">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+  <!-- & Lists -->
+  <!-- : Unordered -->
+  <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+        <ul>
+          <li>Phasellus iaculis neque</li>
+          <li>Purus sodales ultricies</li>
+          <li>Vestibulum laoreet porttitor sem</li>
+          <li>Ac tristique libero volutpat at</li>
+        </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+  </ul>
+  <!-- : Ordered -->
+  
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ol>
+  <!-- : Unstyled - This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well. -->
+  
+    <ul class="list-unstyled">
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+        <ul>
+          <li>Phasellus iaculis neque</li>
+          <li>Purus sodales ultricies</li>
+          <li>Vestibulum laoreet porttitor sem</li>
+          <li>Ac tristique libero volutpat at</li>
+        </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ul>
+  <!-- : Inline -->
+<ul class="list-inline">
+  <li>Lorem Ipsum</li>
+  <li>Phasellus iaculis</li>
+  <li>Nulla volutpat</li>
+</ul>
+  <!-- : Description - A list of terms with their associated descriptions. -->
+  <dl>
+  <dt>Description lists</dt>
+  <dd> A description list is perfect for defining terms.</dd>
+  <dt>hello world</dt>
+  <dd>standard intro program</dd>
+</dl>
+  <!-- : Horizontal description - Make terms and descriptions line up side-by-side. Starts off stacked like default, but when the navbar expands, so do these.
+Horizontal description lists will truncate terms that are too long to fit in the left column  -->
+  <dl class="dl-horizontal">
+  <dt>Description lists</dt>
+  <dd> A description list is perfect for defining terms.</dd>
+  <dt>hello world</dt>
+  <dd>standard intro program</dd>
+</dl>
+  <!-- # Code -->
+  <!-- # Tables -->
+  <!-- # Forms -->
+  <!-- # Buttons -->
+  <!-- & Button tags -->
+  <!-- : Use the button classes on an <code>a</code>, <code>button</code>, or <code>input</code> element. -->
+  <div>
+	<a class="btn btn-default" href="#" role="button">Link</a>
+	<button class="btn btn-default" type="submit">Button</button>
+	<input class="btn btn-default" type="button" value="Input">
+	<input class="btn btn-default" type="submit" value="Submit">
+  </div>
   </div>
 
 </body>
