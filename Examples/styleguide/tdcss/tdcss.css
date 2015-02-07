@@ -222,7 +222,8 @@ body {
   display: inline-block;
   padding: 0.75em;
   color: #afafaf;
-  text-decoration: none;
+  text-decoration: underline;
+  background: #850000
 }
 
 .tdcss-html-snippet-toggle:hover {
