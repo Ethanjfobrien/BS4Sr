@@ -637,7 +637,7 @@ To edit settings, press <kbd>ctrl</kbd> + <kbd>,</kbd>
   <option>5</option>
 </select>
   <!-- & Static control -->
-  <!-- : When you need to place plain text next to a form label within a form, use the <code>.form-control-static</code> class on a <code>p<code> element. -->
+  <!-- : When you need to place plain text next to a form label within a form, use the <code>.form-control-static</code> class on a <code>p</code> element. -->
   <form class="form-horizontal">
   <div class="form-group">
     <label class="col-sm-2 control-label">Email</label>
@@ -747,16 +747,137 @@ To edit settings, press <kbd>ctrl</kbd> + <kbd>,</kbd>
   <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
 </div>
 </div>
+  <!-- & Control sizing -->
+  <!-- : Height sizing -->
+  <div>
+  
+    <form>
+      <div class="controls">
+        <input class="form-control input-lg" placeholder=".input-lg" type="text">
+<br>
+        <input class="form-control" placeholder="Default input" type="text">
+<br>
+        <input class="form-control input-sm" placeholder=".input-sm" type="text">
+<br>
+
+        <select class="form-control input-lg">
+          <option value="">.input-lg</option>
+        </select>
+<br>
+        <select class="form-control">
+          <option value="">Default select</option>
+        </select>
+<br>
+        <select class="form-control input-sm">
+          <option value="">.input-sm</option>
+        </select>
+      </div>
+    </form>
+
+<br>  
+
+  <form class="form-horizontal">
+  <div class="form-group form-group-lg">
+    <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+    </div>
+  </div>
+  <div class="form-group form-group-sm">
+    <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+    </div>
+  </div>
+</form>
+  </div>
+  <!-- : column sizing ; 300px-->
+<div class="row">
+  <div class="col-xs-2">
+    <input type="text" class="form-control" placeholder=".col-xs-2">
+  </div>
+  <div class="col-xs-3">
+    <input type="text" class="form-control" placeholder=".col-xs-3">
+  </div>
+  <div class="col-xs-4">
+    <input type="text" class="form-control" placeholder=".col-xs-4">
+  </div>
+</div>
+  <!-- & Help text -->
+  <!-- : Block level help text for form controls. -->
+    <form>
+      <div class="form-group">
+        <label for="inputHelpBlock">Input with help text</label>
+        <input id="inputHelpBlock" class="form-control" aria-describedby="helpBlock" type="text">
+      </div>
+      <span id="helpBlock" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+    </form>
+  
   <!-- # Buttons -->
   <!-- & Button tags -->
   <!-- : Use the button classes on an <code>a</code>, <code>button</code>, or <code>input</code> element. -->
   <div>
-	<a class="btn btn-default" href="#" role="button">Link</a>
-	<button class="btn btn-default" type="submit">Button</button>
-	<input class="btn btn-default" type="button" value="Input">
-	<input class="btn btn-default" type="submit" value="Submit">
+    <a class="btn btn-default" href="#" role="button">Link</a>
+    <button class="btn btn-default" type="submit">Button</button>
+    <input class="btn btn-default" type="button" value="Input">
+    <input class="btn btn-default" type="submit" value="Submit">
   </div>
+  <!-- & Options -->
+  <!-- : Use any of the available button classes to quickly create a styled button. -->
+  <div>
+    <!-- Standard button -->
+    <button type="button" class="btn btn-default">Default</button>
+
+    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+    <button type="button" class="btn btn-primary">Primary</button>
+
+    <!-- Indicates a successful or positive action -->
+    <button type="button" class="btn btn-success">Success</button>
+
+    <!-- Contextual button for informational alert messages -->
+    <button type="button" class="btn btn-info">Info</button>
+
+    <!-- Indicates caution should be taken with this action -->
+    <button type="button" class="btn btn-warning">Warning</button>
+
+    <!-- Indicates a dangerous or potentially negative action -->
+    <button type="button" class="btn btn-danger">Danger</button>
+
+    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+    <button type="button" class="btn btn-link">Link</button>
   </div>
+  <!-- & Sizes -->
+  <!-- :  Add <code>.btn-lg</input>code>, <code>.btn-sm</code>code>, or <code>.btn-xs</code>code> for additional sizes. -->
+  <div>
+    <p>
+      <button type="button" class="btn btn-primary btn-lg">Large button</button>
+      <button type="button" class="btn btn-default btn-lg">Large button</button>
+    </p>
+    <p>
+      <button type="button" class="btn btn-primary">Default button</button>
+      <button type="button" class="btn btn-default">Default button</button>
+    </p>
+    <p>
+      <button type="button" class="btn btn-primary btn-sm">Small button</button>
+      <button type="button" class="btn btn-default btn-sm">Small button</button>
+    </p>
+    <p>
+      <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
+      <button type="button" class="btn btn-default btn-xs">Extra small button</button>
+    </p>
+  </div>
+  <!-- : Create block level buttons—those that span the full width of a parent— by adding <code>.btn-block</code>. -->
+    <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+      <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+      <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+    </div>
+  <!--  & States -->
+  <!--  : Active state - No need to add <code>active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>. -->
+  <div>
+    <button type="button" class="btn btn-primary btn-lg active">Primary button</button>
+    <button type="button" class="btn btn-default btn-lg active">Button</button>
+  </div>
+
 
 </body>
 </html>
