@@ -12,9 +12,9 @@
         var settings = $.extend({
                 diff: false,
                 fragment_types: {
-                    section: {identifier: "#"},
+                    section: {identifier: "~"},
                     snippet: {identifier: ":"},
-                    description: {identifier: "&"}
+                    description: {identifier: "£"}
                 },
                 fragment_info_splitter: ";",
                 replacementContent: "...",
