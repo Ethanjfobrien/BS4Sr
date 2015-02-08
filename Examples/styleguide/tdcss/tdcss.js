@@ -20,8 +20,8 @@
                 replacementContent: "...",
                 hideTextContent: false,
                 hideTheseAttributesContent: [
-                    'src',
-                    'href'
+                    //'src',
+                    //'href'
                 ],
                 hide_html: false,
                 neutralize_background: false,
@@ -177,7 +177,7 @@
             var title = fragment.snippet_title || '',
                 html = fragment.html,
                 escaped_html = htmlEscape(html),
-                height = getFragmentHeightCSSProperty(fragment),
+                height = getFragmentHeightCSSProperty(fragment) + 70,
                 $row = $("<div style='height:" + height + "' class='tdcss-fragment' id='fragment-" + module.snippet_count + "'></div>"),
                 $dom_example = $("<div class='tdcss-dom-example'>" + html + "</div>"),
                 $code_example = $("<div class='tdcss-code-example'><h3 class='tdcss-h3'>" + title + "</h3><pre><code class='language-markup'>" + escaped_html + "</code></pre></div>");
