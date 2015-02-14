@@ -348,7 +348,8 @@
             $(".tdcss-title").text($("title").text());
             $(".tdcss-controls")
                 .append(makeJumpTo())
-                .append(makeHTMLToggle());
+                .append(makeHTMLToggle())
+                .append(makeFragmentToggle());
         }
 
         function makeJumpTo() {

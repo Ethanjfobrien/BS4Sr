@@ -214,20 +214,22 @@ body {
   color: #7A888D;
 }
 
-.tdcss-controls {
+/*.tdcss-controls {
   text-align: right;
-}
+}*/
 
 .tdcss-html-snippet-toggle {
   display: inline-block;
   padding: 0.75em;
-  color: #afafaf;
+  color: #fff;
   text-decoration: underline;
-  background: #850000
+  background: #204a87;
+  border: 2px solid white;
+  border-radius: 2px;
 }
 
 .tdcss-html-snippet-toggle:hover {
-  color: #ebebeb;
+  color: #BABDB6;
 }
 
 .tdcss-no-fragments {
