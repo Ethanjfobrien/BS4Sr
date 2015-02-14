@@ -27,7 +27,9 @@
                 neutralize_background: false,
                 control_bar_text: {
                     show_html: "Show HTML",
-                    hide_html: "Hide HTML"
+                    hide_html: "Hide HTML",
+                    expand_sections: "Expand Sections",
+                    collapse_sections: "Collapse Sections"
                 }
             }, options),
             module = {
@@ -349,7 +351,7 @@
             $(".tdcss-controls")
                 .append(makeJumpTo())
                 .append(makeHTMLToggle())
-                .append(makeFragmentToggle());
+                .append(makeSectionToggle());
         }
 
         function makeJumpTo() {
@@ -398,6 +400,34 @@
             );
 
             return html_snippet_toggle;
+        }
+        
+        function makeSectionToggle() {
+          var default_text,
+              alternate_text,
+              section_toggle;
+              
+          if (settings.hide_html) {
+                default_text = settings.control_bar_text.collapse_sections;
+                alternate_text = settings.control_bar_text.expand_sections;
+                $(".tdcss-elements").addClass("tdcss-hide-html");
+            } else {
+                default_text = settings.control_bar_text.expand_sections;
+                alternate_text = settings.control_bar_text.collapse_sections;
+            }
+            
+          section_toggle = $("<a href='#' class='tdcss-html-snippet-toggle'>" + default_text + "</a>");  
+          
+          section_toggle.click(
+                function () {
+                    var text = $(this).text() === alternate_text ? default_text : alternate_text;
+
+                    
+                    $(".tdcss-section").toggle();
+                    $(this).text(text);
+                }
+            );
+          return section_toggle;
         }
 
         function diff() {
