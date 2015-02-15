@@ -24,6 +24,7 @@
                     //'href'
                 ],
                 hide_html: false,
+                collapse_section: false,
                 neutralize_background: false,
                 control_bar_text: {
                     show_html: "Show HTML",
@@ -407,7 +408,7 @@
               alternate_text,
               section_toggle;
               
-          if (settings.hide_html) {
+          if (!settings.collapse_sections) {
                 default_text = settings.control_bar_text.collapse_sections;
                 alternate_text = settings.control_bar_text.expand_sections;
                 $(".tdcss-elements").addClass("tdcss-hide-html");
@@ -420,11 +421,16 @@
           
           section_toggle.click(
                 function () {
-                    var text = $(this).text() === alternate_text ? default_text : alternate_text;
+                    var nextText = $(this).text() === alternate_text ? default_text : alternate_text;// text var contains new button value but is not passed til the end of the click function
 
-                    
-                    $(".tdcss-section").toggle();
-                    $(this).text(text);
+                    // if the button says collapse then collapse each section that needs to be collapsed otherwise expand each section that needs expanding
+                    if($(this).text() ==  settings.control_bar_text.collapse_sections) {
+                       $(".tdcss-section").each(function() {
+                         $(this).hasClass("is-collapsed") ? null : $(this).trigger("toggle");
+                      });
+                    }
+
+                    $(this).text(nextText);
                 }
             );
           return section_toggle;
