@@ -428,6 +428,11 @@
                        $(".tdcss-section").each(function() {
                          $(this).hasClass("is-collapsed") ? null : $(this).trigger("toggle");
                       });
+                    } 
+                    else {
+                      $(".tdcss-section").each(function() {
+                         $(this).hasClass("is-collapsed") ? $(this).trigger("toggle") : null;
+                      });
                     }
 
                     $(this).text(nextText);
