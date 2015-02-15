@@ -411,7 +411,6 @@
           if (!settings.collapse_sections) {
                 default_text = settings.control_bar_text.collapse_sections;
                 alternate_text = settings.control_bar_text.expand_sections;
-                $(".tdcss-elements").addClass("tdcss-hide-html");
             } else {
                 default_text = settings.control_bar_text.expand_sections;
                 alternate_text = settings.control_bar_text.collapse_sections;
