@@ -24,10 +24,13 @@
                     //'href'
                 ],
                 hide_html: false,
+                collapse_section: false,
                 neutralize_background: false,
                 control_bar_text: {
                     show_html: "Show HTML",
-                    hide_html: "Hide HTML"
+                    hide_html: "Hide HTML",
+                    expand_sections: "Expand Sections",
+                    collapse_sections: "Collapse Sections"
                 }
             }, options),
             module = {
@@ -349,7 +352,7 @@
             $(".tdcss-controls")
                 .append(makeJumpTo())
                 .append(makeHTMLToggle())
-                .append(makeFragmentToggle());
+                .append(makeSectionToggle());
         }
 
         function makeJumpTo() {
@@ -398,6 +401,44 @@
             );
 
             return html_snippet_toggle;
+        }
+        
+        function makeSectionToggle() {
+          var default_text,
+              alternate_text,
+              section_toggle;
+              
+          if (!settings.collapse_sections) {
+                default_text = settings.control_bar_text.collapse_sections;
+                alternate_text = settings.control_bar_text.expand_sections;
+                $(".tdcss-elements").addClass("tdcss-hide-html");
+            } else {
+                default_text = settings.control_bar_text.expand_sections;
+                alternate_text = settings.control_bar_text.collapse_sections;
+            }
+            
+          section_toggle = $("<a href='#' class='tdcss-html-snippet-toggle'>" + default_text + "</a>");  
+          
+          section_toggle.click(
+                function () {
+                    var nextText = $(this).text() === alternate_text ? default_text : alternate_text;// text var contains new button value but is not passed til the end of the click function
+
+                    // if the button says collapse then collapse each section that needs to be collapsed otherwise expand each section that needs expanding
+                    if($(this).text() ==  settings.control_bar_text.collapse_sections) {
+                       $(".tdcss-section").each(function() {
+                         $(this).hasClass("is-collapsed") ? null : $(this).trigger("toggle");
+                      });
+                    } 
+                    else {
+                      $(".tdcss-section").each(function() {
+                         $(this).hasClass("is-collapsed") ? $(this).trigger("toggle") : null;
+                      });
+                    }
+
+                    $(this).text(nextText);
+                }
+            );
+          return section_toggle;
         }
 
         function diff() {

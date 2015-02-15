@@ -228,6 +228,10 @@ body {
   border-radius: 2px;
 }
 
+.tdcss-html-snippet-toggle:visited {
+  color: white;
+}
+
 .tdcss-html-snippet-toggle:hover {
   color: #BABDB6;
 }
