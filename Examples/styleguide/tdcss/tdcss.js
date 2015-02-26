@@ -183,9 +183,10 @@
                 height = getFragmentHeightCSSProperty(fragment) + 70,
                 $row = $("<div style='height:" + height + "' class='tdcss-fragment' id='fragment-" + module.snippet_count + "'></div>"),
                 $dom_example = $("<div class='tdcss-dom-example'>" + html + "</div>"),
+                $dom_example2 = $("<div class='tdcss-dom-example'>" + html + "</div>"),
                 $code_example = $("<div class='tdcss-code-example'><h3 class='tdcss-h3'>" + title + "</h3><pre><code class='language-markup'>" + escaped_html + "</code></pre></div>");
 
-            $row.append($dom_example, $dom_example, $code_example);
+            $row.append($dom_example, $dom_example2, $code_example);
             $(module.container).next(".tdcss-elements").append($row);
             adjustCodeExampleHeight($row);
 
