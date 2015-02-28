@@ -1,0 +1,15 @@
+/*body {
+  background: #eff;//not part of solution css
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #b73534;// changed to a color more diffrent to original link color
+}*/
+
+.tdcss-dom-example2 h1{
+  color: red;
+}
