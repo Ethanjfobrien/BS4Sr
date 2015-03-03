@@ -22,9 +22,13 @@
     <script type="text/javascript" src="../dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="BS4Sr.css" type="text/css">
     <script>
-    var ruleText = document.styleSheets[2].cssRules[0].cssText;
-    document.styleSheets[2].deleteRule(0);
-   document.styleSheets[2].insertRule(".tdcss-dom-example2 " + ruleText, 0);
+    var numOfRules = document.styleSheets[2].cssRules.length;
+    for( var i = 0; i<numOfRules; i++) {
+      var ruleText = document.styleSheets[2].cssRules[i].cssText;
+      document.styleSheets[2].deleteRule(i);
+      document.styleSheets[2].insertRule(".tdcss-dom-example2 " + ruleText, i);
+    }
+   
     </script>
 
 </head>
