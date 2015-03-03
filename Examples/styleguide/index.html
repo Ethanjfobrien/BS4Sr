@@ -24,9 +24,12 @@
     <script>
     var numOfRules = document.styleSheets[2].cssRules.length;
     for( var i = 0; i<numOfRules; i++) {
-      var ruleText = document.styleSheets[2].cssRules[i].cssText;
+      var oldRule = document.styleSheets[2].cssRules[i];
+      var oldSelectorText = oldRule.selectorText;
+      var newSelectorText = oldSelectorText.replace(",",",.tdcss-dom-example2 ");
+      var styleText = oldRule.style.cssText;
       document.styleSheets[2].deleteRule(i);
-      document.styleSheets[2].insertRule(".tdcss-dom-example2 " + ruleText, i);
+      document.styleSheets[2].insertRule(".tdcss-dom-example2 " + newSelectorText + "{" + styleText + "}", i);
     }
    
     </script>
