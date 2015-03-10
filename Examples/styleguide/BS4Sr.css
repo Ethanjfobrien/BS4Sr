@@ -1,3 +1,6 @@
+body {
+  background: white;
+}
 
 a {
   text-decoration: underline;
@@ -5,4 +8,8 @@ a {
 
 a:visited {
   color: #b73534;// changed to a color more diffrent to original link color
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
+  color: inherit;
 }
