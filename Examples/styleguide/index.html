@@ -26,7 +26,7 @@
     for( var i = 0; i<numOfRules; i++) {
       var oldRule = document.styleSheets[2].cssRules[i];
       var oldSelectorText = oldRule.selectorText;
-      var newSelectorText = oldSelectorText.replace(",",",.tdcss-dom-example2 ");
+      var newSelectorText = oldSelectorText.replace(/,/g,",.tdcss-dom-example2 ");
       var styleText = oldRule.style.cssText;
       document.styleSheets[2].deleteRule(i);
       document.styleSheets[2].insertRule(".tdcss-dom-example2 " + newSelectorText + "{" + styleText + "}", i);
@@ -87,6 +87,10 @@
   <p><em>rendered as italicized text</em></p>
   <!-- : Html5 elements -->
   <p>Feel free to use <b>&lt b &gt</b> and <i>&lt i &gt</i> in HTML5. &ltb&gt is meant to highlight words or phrases without conveying additional importance while &lti&gt is mostly for voice, technical terms, etc.</p>
+  <!-- : inline link -->
+  <p>
+    This is some normal text with an <a href="#">inline link</a> in the middle.
+  </p>
   <!-- £ Alignment classes -->
   <!-- : Easily realign text to components with text alignment classes. -->
   <div><p class="text-left">Left aligned text.</p>
